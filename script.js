@@ -90,4 +90,14 @@
       "Thanks — your message has been noted. We'll be in touch shortly.";
     form.reset();
   });
+
+  burger.addEventListener("click", function () {
+    burger.setAttribute("aria-expanded", nav.classList.contains("open"));
+  });
+  document.querySelectorAll(".cat[data-cat]").forEach(function (c) {
+    c.addEventListener("click", function () {
+      document.getElementById("fsubject").value =
+        "Enquiry: " + c.querySelector("h4").textContent;
+    });
+  });
 })();
