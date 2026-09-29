@@ -101,3 +101,12 @@
     });
   });
 })();
+
+(function () {
+  var hd = document.querySelector("header");
+  function onScroll() {
+    hd.classList.toggle("at-top", window.scrollY < 40);
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
